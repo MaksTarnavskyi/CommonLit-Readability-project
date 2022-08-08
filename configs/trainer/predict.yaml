@@ -1,0 +1,16 @@
+model_name: XGBRegressor
+
+data_part: dev
+
+input:
+  data:
+    folder: data/processed/features
+    filename: ${data_part}_combined_features.parquet
+  model:
+    folder: output/models/${model_name}
+    filename: model.sav
+
+output:
+  folder: output/predictions/${model_name}
+  filename: prediction.csv
+  target_column: predicted_target

@@ -1,0 +1,13 @@
+input:
+  folder : data/input
+  filename : train.csv
+
+output:
+  folder: data/processed/splits
+  train_filename: train.csv
+  dev_filename: dev.csv
+
+target_column_name: target
+random_state: 100
+test_size: 0.05
+stratified: true

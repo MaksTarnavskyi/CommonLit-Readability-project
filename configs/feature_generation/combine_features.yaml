@@ -1,0 +1,10 @@
+data_part: train
+
+input:
+  folder: data/processed/features
+  linguistic_features_filename: ${data_part}_linguistic_features.json
+  text_vectors_filename: ${data_part}_text_vectors.npy
+
+output:
+  folder: data/processed/features
+  filename: ${data_part}_combined_features.parquet

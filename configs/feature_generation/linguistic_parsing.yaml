@@ -1,0 +1,12 @@
+spacy_model_name: en_core_web_sm
+text_column: excerpt
+
+data_part: train
+
+input:
+  folder : data/processed/splits
+  filename: ${data_part}.csv
+
+output:
+  folder: data/processed/features
+  filename: ${data_part}_linguistic_features.json

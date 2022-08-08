@@ -1,0 +1,18 @@
+model_name: XGBRegressor
+
+data_part: dev
+
+input:
+  ground_truth:
+    folder: data/processed/splits
+    filename: ${data_part}.csv
+    target_column: target
+
+  prediction:
+    folder: output/predictions/${model_name}
+    filename: prediction.csv
+    target_column: predicted_target
+
+output:
+  folder: output/metrics/${model_name}
+  filename: metrics.json

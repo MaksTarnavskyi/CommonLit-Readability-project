@@ -1,0 +1,18 @@
+model_name: XGBRegressor
+
+defaults:
+  - _self_
+  - model_params: xgb_regressor
+
+data_part: train
+
+input:
+  folder: data/processed
+  split_filename: splits/${data_part}.csv
+  features_filename: features/${data_part}_combined_features.parquet
+
+output:
+  folder: output/models/${model_name}
+  model_filename: model.sav
+
+target_column: target

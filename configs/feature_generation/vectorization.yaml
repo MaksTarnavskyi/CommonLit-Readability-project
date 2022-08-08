@@ -1,0 +1,12 @@
+vectorization_model_name: all-MiniLM-L6-v2
+text_column: excerpt
+
+data_part: train
+
+input:
+  folder : data/processed/splits
+  filename: ${data_part}.csv
+
+output:
+  folder: data/processed/features
+  filename: ${data_part}_text_vectors.npy
